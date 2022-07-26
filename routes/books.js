@@ -54,6 +54,7 @@ router.post('/', async (req, res) => {
 
 // Show Book Route
 router.get('/:id', async (req, res) => {
+    const id_obj = ObjectId(req.params.id);
     try {
         const book = await Book.findById(req.params.id).populate('author').exec()
         res.render('books')
@@ -92,7 +93,7 @@ router.put('/:id', async (req, res) => {
         if (book != null) {
             renderNewPage(res, book, true)
         } else {
-            redirect('/')
+            res.redirect('/')
         }
     }
 })
