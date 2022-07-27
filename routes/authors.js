@@ -21,7 +21,9 @@ router.get('/', async (req, res) => {
 })
 
 // New Author Route
-
+router.get('/new', (req, res) => {
+    res.render('authors/new', { author: new Author() })
+})
 
 // Create Author Route
 router.post('/', async (req, res) => {
@@ -37,17 +39,7 @@ router.post('/', async (req, res) => {
             errorMessage: 'Error creating Author'
         })
     }
-    // author.save((err, newAuthor) => {
-    //     if (err) {
-    //         res.render('authors/new', {
-    //             author: author,
-    //             errorMessage: 'Error creating Author'
-    //         })
-    //     } else {
-    //         // res.redirect(`authors/${newAuthor.id}`)
-    //         res.redirect(`authors`)
-    //     }
-    // })
+
 })
 
 router.get('/:id', async (req, res) => {

@@ -1,0 +1,23 @@
+:root{
+    --color-btn-primary-background: rgb(73, 92, 131);
+    --color-btn-danger-background: rgb(215, 56, 94);
+    --color-btn-text: rgb(238, 238, 238);
+}
+.btn{
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary{
+    color: var(--color-btn-text);
+    background-color: var(--color-btn-primary-background);
+}
+
+.btn-danger{
+    color: var(--color-btn-text);
+    background-color: var(--color-btn-danger-background);
+}

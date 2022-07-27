@@ -1,5 +1,7 @@
 @import 'shared/variables.css';
 @import 'shared/header.css';
+@import 'shared/fonts.css';
+@import 'shared/buttons.css';
 
 :root{
     font-size: 20px;
@@ -11,7 +13,7 @@
 }
 
 body{
-    background: linear-gradient(to right, var(--color-background-dark), var(--color-background-light));
+    background: var(--color-background);
 }
 
 .container{
@@ -22,4 +24,8 @@ body{
 
 .inner-container{
     margin: 0 2rem;
+}
+.page-header{
+    font-size: 2rem;
+    font-weight: 500;
 }
