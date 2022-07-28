@@ -21,3 +21,15 @@
     color: var(--color-btn-text);
     background-color: var(--color-btn-danger-background);
 }
+.btn-row{
+    display: flex;
+    align-items: flex-start;
+}
+
+.btn-row > *{
+    margin-left: 1rem;
+}
+
+.btn-row > *:first-child{
+    margin-left: 0;
+}
