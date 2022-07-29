@@ -1,5 +1,9 @@
+@import 'shared/variables.css';
+
 :root{
     --form-label-font-size: 1.2rem;
+    --form-input-background-color: rgb(255, 211, 105);
+    --form-input-color: rgb(34, 40, 49);
 }
 .form-row{
     display: flex;
@@ -15,6 +19,9 @@
 .form-item:first-child{
     margin-left: 0;
 }
+.form-item-end{
+    justify-content: flex-end;
+}
 .form-item-no-grow{
     flex-grow: 0;
 }
@@ -27,4 +34,28 @@
     height: 2rem;
     padding: .25rem .5rem;
     border-radius: .25rem;
+    background-color: var(--form-input-background-color);
+    color: var(--form-input-color);
+    font-size: 1rem;
+    font-weight: normal;
+    outline: none;
+}
+
+.form-item textarea{
+    height: 100%;
+    resize: none;
+}
+.form-item select option {
+    background-color: black;
+}
+
+.filepond--root{
+    margin-bottom: 0;
+}
+.filepond--panel-root{
+    background-color: var(--form-input-background-color);
+}
+.filepond--drop-label{
+    color: var(--form-input-color);
+    font-size: inherit;
 }

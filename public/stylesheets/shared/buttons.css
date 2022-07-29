@@ -1,6 +1,8 @@
 :root{
     --color-btn-primary-background: rgb(73, 92, 131);
     --color-btn-danger-background: rgb(215, 56, 94);
+    --color-btn-primary-background-hover: rgb(127, 145, 181);
+    --color-btn-danger-background-hover: rgb(219, 94, 124);
     --color-btn-text: rgb(238, 238, 238);
 }
 .btn{
@@ -21,6 +23,17 @@
     color: var(--color-btn-text);
     background-color: var(--color-btn-danger-background);
 }
+
+.btn-primary:hover{
+    color: var(--color-btn-text);
+    background-color: var(--color-btn-primary-background-hover);
+}
+
+.btn-danger:hover{
+    color: var(--color-btn-text);
+    background-color: var(--color-btn-danger-background-hover);
+}
+
 .btn-row{
     display: flex;
     align-items: flex-start;
