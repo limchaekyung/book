@@ -53,7 +53,7 @@ router.post('/', async (req, res) => {
 })
 
 // Show Book Route
-router.get('/:id', async (req, res) => {
+router.put('/:id', async (req, res) => {
     const id_obj = ObjectId(req.params.id);
     try {
         const book = await Book.findById(req.params.id).populate('author').exec()
@@ -121,7 +121,7 @@ async function renderNewPage(res, book, hasError = false) {
     renderFormPage(res, book, 'new', hasError)
 }
 
-async function renderNewPage(res, book, hasError = false) {
+async function renderEditPage(res, book, hasError = false) {
     renderFormPage(res, book, 'edit', hasError)
 }
 
